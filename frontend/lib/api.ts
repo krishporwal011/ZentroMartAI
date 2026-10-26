@@ -8,14 +8,26 @@ import {
   TinyFishRunResponse,
 } from "@/types";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+function getApiBaseUrl(): string {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL.replace(/\/+$/, "");
+  }
+  // When running in browser on Vercel, default to deployed Render backend
+  if (typeof window !== "undefined" && window.location.hostname.includes("vercel.app")) {
+    return "https://zentromartai.onrender.com";
+  }
+  return "http://localhost:8000";
+}
+
+const API_BASE = getApiBaseUrl();
 
 export class ApiClient {
   private static async request<T>(
     endpoint: string,
     options: RequestInit = {}
   ): Promise<T> {
-    const url = `${API_BASE}${endpoint}`;
+    const cleanEndpoint = endpoint.startsWith("/") ? endpoint : `/${endpoint}`;
+    const url = `${API_BASE}${cleanEndpoint}`;
     const headers = {
       Accept: "application/json",
       ...(options.headers || {}),
@@ -178,6 +190,7 @@ export class ApiClient {
     provider: string;
   }> {
     const formData = new FormData();
+    formData.append("audio", audioBlob, "recording.webm");
     formData.append("audio_file", audioBlob, "recording.webm");
     formData.append("language_code", languageCode);
 

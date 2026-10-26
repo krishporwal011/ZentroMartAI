@@ -28,15 +28,38 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS Middleware with explicit origins and localhost regex
+# CORS Middleware with explicit origins and regex for all Vercel apps & localhost
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.FRONTEND_ORIGINS,
-    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$",
+    allow_origin_regex=r"^(https?://(localhost|127\.0\.0\.1)(:\d+)?|https://.*\.vercel\.app)$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/", tags=["Root"])
+def root_endpoint():
+    return {
+        "service": settings.PROJECT_NAME,
+        "version": settings.VERSION,
+        "status": "online",
+        "documentation": "/docs",
+        "openapi_spec": "/openapi.json",
+        "health": "/health",
+        "integrations": "/api/health/integrations",
+        "frontend": "https://zentro-mart-ai.vercel.app",
+    }
+
+@app.get("/api/docs", include_in_schema=False)
+def redirect_to_docs():
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/docs")
+
+@app.get("/api/openapi.json", include_in_schema=False)
+def redirect_to_openapi():
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/openapi.json")
 
 # Exception handlers
 @app.exception_handler(Exception)

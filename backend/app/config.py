@@ -27,13 +27,15 @@ class Settings(BaseModel):
     DATASET_DIR: Path = DATASET_PATH
     REFERENCE_DATE: str = os.getenv("REFERENCE_DATE", "2026-10-20")
     
-    # CORS
+    # CORS allowed origins
     FRONTEND_ORIGINS: List[str] = [
-        os.getenv("FRONTEND_ORIGIN", "http://localhost:3000"),
+        "https://zentro-mart-ai.vercel.app",
+        "https://zentromart-ai.vercel.app",
+        "http://localhost:3000",
         "http://localhost:3001",
         "http://127.0.0.1:3000",
         "http://127.0.0.1:3001",
-    ]
+    ] + ([o.strip().rstrip("/") for o in os.getenv("FRONTEND_ORIGIN", "").split(",") if o.strip()] if os.getenv("FRONTEND_ORIGIN") else [])
     
     # LLM Settings
     LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "deterministic")  # deterministic | openai | gemini

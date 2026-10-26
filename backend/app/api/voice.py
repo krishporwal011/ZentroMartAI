@@ -21,18 +21,23 @@ def voice_status() -> Dict[str, Any]:
 
 @router.post("/transcribe")
 async def transcribe_audio_endpoint(
-    audio: UploadFile = File(...),
+    audio: Optional[UploadFile] = File(None),
+    audio_file: Optional[UploadFile] = File(None),
     language_code: str = Form("hi-IN"),
 ) -> Dict[str, Any]:
     """Transcribe user-recorded audio via Gnani STT."""
+    file_to_use = audio or audio_file
+    if not file_to_use:
+        raise HTTPException(status_code=422, detail="Audio file required (field 'audio' or 'audio_file')")
+
     try:
-        content = await audio.read()
+        content = await file_to_use.read()
         if len(content) == 0:
             return {"success": False, "error": "Empty audio payload"}
         
         result = await voice_service.transcribe_audio(
             audio_bytes=content,
-            filename=audio.filename or "audio.wav",
+            filename=file_to_use.filename or "audio.wav",
             language_code=language_code,
         )
         return result
