@@ -1,0 +1,18 @@
+[
+  {
+    "doc_id": "POL-DEL",
+    "doc_title": "Delivery and shipping policy",
+    "doc_type": "policy",
+    "audience": "customer",
+    "language": "en",
+    "version": "2.0",
+    "effective_from": "2026-04-01",
+    "status": "current",
+    "supersedes": null,
+    "superseded_by": null,
+    "section_id": "DEL-4",
+    "section_title": "Late deliveries",
+    "content": "If an **Express** order arrives after its promised date, the \u20b979 express fee the customer paid is credited to ZentroMart Wallet automatically within 48 hours. ZentroMart Plus members, who pay no express fee, get no credit. There is no compensation for late Standard deliveries. Agents must not offer any other compensation.",
+    "source_file": "pol_delivery_shipping.md"
+  }
+]

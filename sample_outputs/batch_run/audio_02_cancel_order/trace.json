@@ -1,0 +1,20 @@
+{
+  "input_audio_file": "audio_02_cancel_order.wav",
+  "input_audio_size_bytes": 64044,
+  "session_id": "batch_audio_02_cancel_order",
+  "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+  "recognized_text": "Please cancel my order 67830826 right now.",
+  "agent_decision": "clarify",
+  "tool_calls": [
+    "lookup_order(order_id=67830826)"
+  ],
+  "evidence_sections": [
+    "IDV-2"
+  ],
+  "response_text": "Hello! I am ZentroMart's AI support assistant. For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode.",
+  "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+  "output_audio_file": "response.wav",
+  "processing_time_seconds": 0.252,
+  "timestamp": "2026-10-27T01:24:58.885299",
+  "status": "SUCCESS"
+}

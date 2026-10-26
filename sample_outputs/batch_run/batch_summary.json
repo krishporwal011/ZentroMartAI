@@ -1,0 +1,106 @@
+{
+  "execution_timestamp": "2026-10-27T01:24:59.630242",
+  "total_inputs": 5,
+  "successful_inputs": 5,
+  "failed_inputs": 0,
+  "gnani_configured": false,
+  "reference_date": "2026-10-20",
+  "input_directory": "/Users/tanyaporwal/Desktop/ZENTRO_MART/sample_audio",
+  "output_directory": "/Users/tanyaporwal/Desktop/ZENTRO_MART/sample_outputs/batch_run",
+  "traces": [
+    {
+      "input_audio_file": "audio_01_return_laptop.wav",
+      "input_audio_size_bytes": 64044,
+      "session_id": "batch_audio_01_return_laptop",
+      "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+      "recognized_text": "Can I return my unopened laptop delivered 4 days ago?",
+      "agent_decision": "answer",
+      "tool_calls": [],
+      "evidence_sections": [
+        "RET-2"
+      ],
+      "response_text": "Return windows by category: Electronics 7 days, Fashion 15 days (30 days during 1-15 Oct festive sale), Home & Kitchen 10 days.",
+      "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+      "output_audio_file": "response.wav",
+      "processing_time_seconds": 0.247,
+      "timestamp": "2026-10-27T01:24:58.632855",
+      "status": "SUCCESS"
+    },
+    {
+      "input_audio_file": "audio_02_cancel_order.wav",
+      "input_audio_size_bytes": 64044,
+      "session_id": "batch_audio_02_cancel_order",
+      "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+      "recognized_text": "Please cancel my order 67830826 right now.",
+      "agent_decision": "clarify",
+      "tool_calls": [
+        "lookup_order(order_id=67830826)"
+      ],
+      "evidence_sections": [
+        "IDV-2"
+      ],
+      "response_text": "Hello! I am ZentroMart's AI support assistant. For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode.",
+      "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+      "output_audio_file": "response.wav",
+      "processing_time_seconds": 0.252,
+      "timestamp": "2026-10-27T01:24:58.885299",
+      "status": "SUCCESS"
+    },
+    {
+      "input_audio_file": "audio_03_refund_status.wav",
+      "input_audio_size_bytes": 64044,
+      "session_id": "batch_audio_03_refund_status",
+      "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+      "recognized_text": "Where is my refund for the returned running shoes?",
+      "agent_decision": "answer",
+      "tool_calls": [],
+      "evidence_sections": [
+        "RET-2"
+      ],
+      "response_text": "Return windows by category: Electronics 7 days, Fashion 15 days (30 days during 1-15 Oct festive sale), Home & Kitchen 10 days.",
+      "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+      "output_audio_file": "response.wav",
+      "processing_time_seconds": 0.247,
+      "timestamp": "2026-10-27T01:24:59.131976",
+      "status": "SUCCESS"
+    },
+    {
+      "input_audio_file": "audio_04_damaged_tv.wav",
+      "input_audio_size_bytes": 64044,
+      "session_id": "batch_audio_04_damaged_tv",
+      "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+      "recognized_text": "The television screen arrived cracked on order 89782837. Unit value exceeds 10000.",
+      "agent_decision": "clarify",
+      "tool_calls": [
+        "lookup_order(order_id=89782837)"
+      ],
+      "evidence_sections": [
+        "IDV-2"
+      ],
+      "response_text": "Hello! I am ZentroMart's AI support assistant. For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode.",
+      "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+      "output_audio_file": "response.wav",
+      "processing_time_seconds": 0.25,
+      "timestamp": "2026-10-27T01:24:59.381753",
+      "status": "SUCCESS"
+    },
+    {
+      "input_audio_file": "audio_05_express_delivery.wav",
+      "input_audio_size_bytes": 64044,
+      "session_id": "batch_audio_05_express_delivery",
+      "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+      "recognized_text": "Why is my express delivery late to pincode 560001?",
+      "agent_decision": "answer",
+      "tool_calls": [],
+      "evidence_sections": [
+        "DEL-4"
+      ],
+      "response_text": "If an Express order arrives after its promised date, the \u20b979 express fee is credited to your ZentroMart Wallet automatically within 48 hours.",
+      "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+      "output_audio_file": "response.wav",
+      "processing_time_seconds": 0.248,
+      "timestamp": "2026-10-27T01:24:59.630112",
+      "status": "SUCCESS"
+    }
+  ]
+}

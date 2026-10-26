@@ -219,7 +219,34 @@ Debt-to-Equity Calculation:
 
 ---
 
+## 🎙️ Mandatory Batch Audio Processing (`run.py` & `run.sh`)
+
+In compliance with Phase 5 of the VoiceOps 2026 Capstone Brief, ZentroMart provides a single reproducible command that accepts an input directory of customer audio files, discovers inputs deterministically, executes the full pipeline (Gnani STT &rarr; Step 3 Conversational Agent & Tools &rarr; Gnani TTS), and outputs complete traceable records:
+
+```bash
+# Execute batch audio processing over customer voice recordings
+python3 run.py --input-dir sample_audio --output-dir sample_outputs/batch_run
+
+# Or run with the executable shell wrapper:
+./run.sh --input-dir sample_audio --output-dir sample_outputs/batch_run
+
+# Run full baseline vs RAG comparison + multi-turn benchmark + batch audio run:
+python3 run.py --evaluate
+```
+
+### Traceable Output Structure
+For each input audio file (e.g., `audio_01_return_laptop.wav`), the batch runner creates an isolated, traceable result directory in `sample_outputs/batch_run/`:
+* `recognized_text.txt`: The speech-to-text transcript from Gnani STT.
+* `response.txt`: The conversational agent's generated reply.
+* `response.wav`: Synthesized speech audio reply from Gnani TTS.
+* `retrieved_chunks.json`: Exact policy sections retrieved and cited from `kb/*.md`.
+* `trace.json`: Turn execution latency, agent decision, and tool call logs.
+* `batch_summary.json`: Top-level batch metrics and success counts.
+
+---
+
 ## 🧪 Evaluation Benchmarks & Testing
+
 
 ### Running the Test Suite
 ```bash

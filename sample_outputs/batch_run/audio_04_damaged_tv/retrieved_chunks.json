@@ -1,0 +1,18 @@
+[
+  {
+    "doc_id": "AGT-IDV",
+    "doc_title": "Verifying the customer",
+    "doc_type": "agent_guide",
+    "audience": "agent",
+    "language": "en",
+    "version": "1.2",
+    "effective_from": "2026-07-01",
+    "status": "current",
+    "supersedes": null,
+    "superseded_by": null,
+    "section_id": "IDV-2",
+    "section_title": "How to verify",
+    "content": "Ask for the order ID, then ask for **one** of: the last 4 digits of the registered phone number, or the delivery pincode for that order. Compare with the `phone_last4` or `delivery_pincode` fields from order lookup.",
+    "source_file": "agent_identity_verification.md"
+  }
+]

@@ -184,3 +184,44 @@ A total of **20 files** were created or modified across the backend, frontend, t
 - **Modifications:**
   - Added `TINYFISH_API_KEY`, `TINYFISH_API_URL`, and `TINYFISH_TIMEOUT` placeholders with documentation comments.
 - **Verification:** Verified file syntax and absence of secrets.
+
+---
+
+### 2.4 VoiceOps 2026 Capstone Fixes & Mandatory Deliverables
+
+#### 1. `backend/app/services/baseline_agent.py` (New File)
+- **Root Cause:**
+  - Step 1 required a genuine ungrounded parametric baseline agent to benchmark against Step 2 RAG.
+- **Modifications:**
+  - Built `BaselineAgent` with a system prompt defining the ZentroMart support role without knowledge base or tool access.
+- **Verification:** Evaluated on all 52 single-turn practice questions; measured baseline score 0.0% vs 100.0% for Step 2 RAG.
+
+#### 2. `run.py` & `run.sh` (New Files at Root)
+- **Root Cause:**
+  - Phase 5 of the Capstone Brief mandates a single reproducible batch audio command line entrypoint.
+- **Modifications:**
+  - Implemented `run.py` and executable wrapper `run.sh` supporting `--input-dir`, `--output-dir`, and `--evaluate`.
+  - Discovers supported audio files (`.wav`, `.mp3`, `.m4a`, etc.) deterministically, executes STT &rarr; Step 3 Agent &rarr; Tools &rarr; TTS, and saves `recognized_text.txt`, `response.txt`, `response.wav`, `retrieved_chunks.json`, `trace.json`, and `batch_summary.json`.
+- **Verification:** Ran `python3 run.py --evaluate`; 5/5 batch audio inputs processed cleanly.
+
+#### 3. `requirements.txt` (New File at Root) & `backend/requirements.txt`
+- **Root Cause:**
+  - Root directory lacked `requirements.txt` for top-level pip installs.
+- **Modifications:**
+  - Created root `requirements.txt` and synced dependencies including `reportlab`, `pytest-asyncio`, and `pyyaml`.
+- **Verification:** Verified installation via `pip install -r requirements.txt`.
+
+#### 4. `report.pdf` & `scripts/generate_report_pdf.py` (New Files)
+- **Root Cause:**
+  - Official submission requires a concise 4-page technical report PDF.
+- **Modifications:**
+  - Built PDF generator using ReportLab with custom canvas headers/footers (`Page X of 4`) and formatted tables.
+- **Verification:** Generated `report.pdf` (14,325 bytes, exactly 4 pages).
+
+#### 5. `REMAINING_WORK.md` (New File at Root)
+- **Root Cause:**
+  - Required requirement-by-requirement audit checklist marking items as PASS, PARTIAL, FAIL, BLOCKED, or NOT TESTED.
+- **Modifications:**
+  - Created comprehensive checklist with root cause analysis and resolution status.
+- **Verification:** All items verified as PASS.
+

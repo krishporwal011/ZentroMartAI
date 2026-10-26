@@ -1,0 +1,20 @@
+{
+  "input_audio_file": "audio_04_damaged_tv.wav",
+  "input_audio_size_bytes": 64044,
+  "session_id": "batch_audio_04_damaged_tv",
+  "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+  "recognized_text": "The television screen arrived cracked on order 89782837. Unit value exceeds 10000.",
+  "agent_decision": "clarify",
+  "tool_calls": [
+    "lookup_order(order_id=89782837)"
+  ],
+  "evidence_sections": [
+    "IDV-2"
+  ],
+  "response_text": "Hello! I am ZentroMart's AI support assistant. For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode.",
+  "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+  "output_audio_file": "response.wav",
+  "processing_time_seconds": 0.25,
+  "timestamp": "2026-10-27T01:24:59.381753",
+  "status": "SUCCESS"
+}

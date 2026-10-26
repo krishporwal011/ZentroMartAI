@@ -1,0 +1,18 @@
+{
+  "input_audio_file": "audio_03_refund_status.wav",
+  "input_audio_size_bytes": 64044,
+  "session_id": "batch_audio_03_refund_status",
+  "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+  "recognized_text": "Where is my refund for the returned running shoes?",
+  "agent_decision": "answer",
+  "tool_calls": [],
+  "evidence_sections": [
+    "RET-2"
+  ],
+  "response_text": "Return windows by category: Electronics 7 days, Fashion 15 days (30 days during 1-15 Oct festive sale), Home & Kitchen 10 days.",
+  "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+  "output_audio_file": "response.wav",
+  "processing_time_seconds": 0.247,
+  "timestamp": "2026-10-27T01:24:59.131976",
+  "status": "SUCCESS"
+}

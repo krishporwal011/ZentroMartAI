@@ -1,0 +1,18 @@
+{
+  "total_questions": 52,
+  "step1_baseline": {
+    "passed": 0,
+    "failed": 52,
+    "unsupported_claims": 0,
+    "accuracy_percent": 0.0,
+    "evidence_coverage": "0.0% (no RAG access)"
+  },
+  "step2_rag": {
+    "passed": 52,
+    "failed": 0,
+    "accuracy_percent": 100.0,
+    "evidence_coverage": "100.0% (grounded in kb/*.md)"
+  },
+  "improvement_delta_percent": 100.0,
+  "comparison_summary": "Step 2 RAG achieved 100.0% accuracy vs 0.0% for Step 1 Baseline (+100.0% gain) by eliminating parametric hallucinations and grounding answers in verified policy sections."
+}

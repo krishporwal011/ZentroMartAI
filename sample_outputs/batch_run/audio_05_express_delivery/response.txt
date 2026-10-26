@@ -1,0 +1,1 @@
+If an Express order arrives after its promised date, the ₹79 express fee is credited to your ZentroMart Wallet automatically within 48 hours.

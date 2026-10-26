@@ -1,0 +1,27 @@
+{
+  "audio_01_return_laptop.wav": {
+    "transcript": "Can I return my unopened laptop delivered 4 days ago?",
+    "intent": "return_eligibility",
+    "created_at": "2026-10-27T01:19:02.203670"
+  },
+  "audio_02_cancel_order.wav": {
+    "transcript": "Please cancel my order 67830826 right now.",
+    "intent": "cancellation",
+    "created_at": "2026-10-27T01:19:02.456157"
+  },
+  "audio_03_refund_status.wav": {
+    "transcript": "Where is my refund for the returned running shoes?",
+    "intent": "refund_status",
+    "created_at": "2026-10-27T01:19:02.694592"
+  },
+  "audio_04_damaged_tv.wav": {
+    "transcript": "The television screen arrived cracked on order 89782837. Unit value exceeds 10000.",
+    "intent": "damaged_item",
+    "created_at": "2026-10-27T01:19:02.933471"
+  },
+  "audio_05_express_delivery.wav": {
+    "transcript": "Why is my express delivery late to pincode 560001?",
+    "intent": "delivery_delay",
+    "created_at": "2026-10-27T01:19:03.170845"
+  }
+}

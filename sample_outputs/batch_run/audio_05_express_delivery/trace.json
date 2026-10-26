@@ -1,0 +1,18 @@
+{
+  "input_audio_file": "audio_05_express_delivery.wav",
+  "input_audio_size_bytes": 64044,
+  "session_id": "batch_audio_05_express_delivery",
+  "stt_mode": "simulated_local_stt (Set GNANI_API_KEY for live transcription)",
+  "recognized_text": "Why is my express delivery late to pincode 560001?",
+  "agent_decision": "answer",
+  "tool_calls": [],
+  "evidence_sections": [
+    "DEL-4"
+  ],
+  "response_text": "If an Express order arrives after its promised date, the \u20b979 express fee is credited to your ZentroMart Wallet automatically within 48 hours.",
+  "tts_mode": "synthesized_local_wav (Set GNANI_API_KEY for live synthesis)",
+  "output_audio_file": "response.wav",
+  "processing_time_seconds": 0.248,
+  "timestamp": "2026-10-27T01:24:59.630112",
+  "status": "SUCCESS"
+}

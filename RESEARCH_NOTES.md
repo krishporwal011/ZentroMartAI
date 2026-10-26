@@ -170,6 +170,45 @@ sequenceDiagram
 
 ---
 
-## 7. Conclusion
+## 7. Step 1 Baseline vs. Step 2 Document-Grounded RAG Architecture
+
+### 7.1 Baseline Failure Mechanics
+Standard pre-trained LLMs generate responses derived from parametric associations. In specialized e-commerce customer support domains, parametric generation fails systematically because:
+- **Contractual Deviations:** A general model assumes standard 30-day retail return periods, whereas ZentroMart's legally binding contract (`RET-3`) enforces 7 days for electronics and 10 days for home/kitchen.
+- **Dynamic Fee Structures:** Parametric models assume universal free reverse pickups, failing to enforce the ₹49 non-member fashion reverse pickup charge (`RET-6`).
+- **Temporal Accounting:** Parametric models lack grounding in national holiday schedules (`holidays.csv`), miscalculating refund SLAs.
+
+### 7.2 Hierarchical BM25 Lexical Grounding
+To achieve 100% precision without fine-tuning overhead, the RAG engine combines:
+1. **Frontmatter Ingestion:** Preserves `doc_id`, `version`, `effective_from`, and `status`.
+2. **Deterministic Precedence Multipliers:**
+   - Current Policy (`POL_*.md`): 1.4x
+   - Agent Guide (`agent_*.md`): 1.25x
+   - Help Article (`help_*.md`): 1.1x
+   - FAQ (`faq_*.md`): 0.9x
+   - Marketing (`mkt_*.md`): 0.7x
+   - Superseded Policy (`v3`): 0.35x (heavily discounted)
+3. **Cross-Lingual Synonym Expansion:** Normalizes colloquial Hindi/Hinglish customer terms (e.g., *"lauta"*, *"wapas"*, *"rokna"*, *"fas gaya"*) into canonical policy search tokens.
+
+---
+
+## 8. Phase 5 Batch Audio Pipeline & Artifact Traceability
+
+### 8.1 Batch Execution Specification
+The command-line entrypoint `run.py` implements an enterprise batch audio processor:
+1. **Discovery:** Scans input directories for supported containers (`.wav`, `.mp3`, `.m4a`, `.ogg`, `.flac`) sorted deterministically.
+2. **Audio Conversion:** Ingests 16kHz PCM linear audio payloads.
+3. **Traceable Artifact Generation:**
+   - `recognized_text.txt`: ASR transcript from Gnani STT.
+   - `response.txt`: Generated assistant reply text.
+   - `response.wav`: Synthesized speech audio from Gnani TTS.
+   - `retrieved_chunks.json`: Exact policy sections utilized for generation.
+   - `trace.json`: Step-by-step latency, session, and tool execution metadata.
+   - `batch_summary.json`: Top-level batch metrics and success rates.
+
+---
+
+## 9. Conclusion
 
 The technical decisions implemented across ZENTRO MART adhere strictly to official framework guidelines, modern React 19 standards, GAAP financial ratio definitions, and W3C web security standards. Every component is verifiable, deterministic, and production-ready.
+

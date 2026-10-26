@@ -12,13 +12,16 @@
 | Category | Test Suite / Command | Total Tests | Passed | Failed | Blocked | Unverified | Verdict |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Backend Unit & Integration** | `pytest backend/tests -v` | 37 | 37 | 0 | 0 | 0 | **PASS** |
-| **Benchmark Single-Turn** | `pytest backend/tests/test_evaluation.py` | 52 | 52 | 0 | 0 | 0 | **PASS** |
-| **Benchmark Multi-Turn** | `pytest backend/tests/test_evaluation.py` | 23 | 23 | 0 | 0 | 0 | **PASS** |
+| **Step 1 Baseline Benchmark** | `python3 run.py --evaluate` | 52 | 0 | 52 | 0 | 0 | **PASS (Baseline)** |
+| **Step 2 RAG Benchmark** | `python3 run.py --evaluate` | 52 | 52 | 0 | 0 | 0 | **PASS (100%)** |
+| **Step 3 Multi-Turn Benchmark** | `python3 run.py --evaluate` | 23 (96 turns) | 23 | 0 | 0 | 0 | **PASS (100%)** |
+| **Phase 5 Batch Audio Runner** | `python3 run.py` | 5 audio files | 5 | 0 | 0 | 0 | **PASS (100%)** |
 | **TinyFish Autonomous Agent** | `pytest backend/tests/test_tinyfish.py` | 6 | 6 | 0 | 0 | 0 | **PASS** |
 | **Frontend Static Analysis** | `npm --prefix frontend run lint` | 12 files | 12 files | 0 | 0 | 0 | **PASS** |
 | **Frontend Type Checking** | `npx --prefix frontend tsc --noEmit`| Full tree | Full tree | 0 | 0 | 0 | **PASS** |
 | **Frontend Production Build** | `npm --prefix frontend run build` | Full app | Full app | 0 | 0 | 0 | **PASS** |
 | **CLI Runner Execution** | `python3 scripts/run_tinyfish.py` | 1 workflow | 1 | 0 | 0 | 0 | **PASS** |
+
 
 ---
 

@@ -1,0 +1,1429 @@
+{
+  "total_conversations": 23,
+  "passed_conversations": 23,
+  "failed_conversations": 0,
+  "accuracy_percent": 100.0,
+  "results": [
+    {
+      "conversation_id": "PC002",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 8978 2837.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=89782837)",
+          "actual_tools": [
+            "lookup_order(order_id=89782837)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 4533 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=89782837, verification_value=4533)",
+          "actual_tools": [
+            "lookup_order(order_id=89782837, verification_value=4533)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Kabir, verification ho gaya. Aapke order 89782837 ka status 'delivered' hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Maine Zentro Vista 43-inch 4K Smart TV damage report kiya tha. Abhi replacement approve kar do na?",
+          "passed": true,
+          "expected_decision": "escalate",
+          "actual_decision": "escalate",
+          "expected_tools": "create_ticket()",
+          "actual_tools": [
+            "create_ticket(reason=high_value_damage)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Claims for items worth more than \u20b910,000 must be reviewed by the Priority Resolution team. I have created ticket TKT59d5ed57c9764239b138de549f33b0cc and connected you to a specialist colleague."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC003",
+      "passed": true,
+      "total_turns": 5,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 1859 9253.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=18599253)",
+          "actual_tools": [
+            "lookup_order(order_id=18599253)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 4265 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=18599253, verification_value=4265)",
+          "actual_tools": [
+            "lookup_order(order_id=18599253, verification_value=4265)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Meera, verification ho gaya. Aapke order 18599253 ka status 'delivered' hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Kya main Kaafi Running Sneakers return kar sakti hoon?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Haan, aap ise 27 October 2026 tak return kar sakte hain. Pickup is free."
+        },
+        {
+          "turn": 5,
+          "customer_message": "Aur refund kitne din mein aayega?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Refund instant, 2 ghante ke andar ZentroMart Wallet mein credit ho jaata hai."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC004",
+      "passed": true,
+      "total_turns": 5,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "\u0928\u092e\u0938\u094d\u0924\u0947, \u092e\u0941\u091d\u0947 \u0905\u092a\u0928\u0947 \u0911\u0930\u094d\u0921\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u091a\u093e\u0939\u093f\u090f\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092e\u0948\u0902 ZentroMart \u0915\u0940 AI (artificial intelligence) \u0938\u092a\u094b\u0930\u094d\u091f \u0905\u0938\u093f\u0938\u094d\u091f\u0947\u0902\u091f \u0939\u0942\u0901\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u093e 8-\u0905\u0902\u0915\u094b\u0902 \u0915\u093e \u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964"
+        },
+        {
+          "turn": 2,
+          "customer_message": "\u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0939\u0948 7936 3550\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=79363550)",
+          "actual_tools": [
+            "lookup_order(order_id=79363550)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 (last 4 digits) \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 3,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 2949 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=79363550, verification_value=2949)",
+          "actual_tools": [
+            "lookup_order(order_id=79363550, verification_value=2949)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0927\u0928\u094d\u092f\u0935\u093e\u0926 Harini, \u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0938\u092b\u0932 \u0939\u0941\u0906\u0964 \u0906\u092a\u0915\u0947 \u0911\u0930\u094d\u0921\u0930 79363550 \u0915\u093e \u0938\u094d\u091f\u0947\u091f\u0938 'delivered' \u0939\u0948\u0964"
+        },
+        {
+          "turn": 4,
+          "customer_message": "\u0915\u094d\u092f\u093e \u092e\u0948\u0902 UrbanThread Slim Fit Jeans \u0935\u093e\u092a\u0938 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u0942\u0901?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0939\u093e\u0901, \u0906\u092a \u0907\u0938\u0947 13 \u0928\u0935\u0902\u092c\u0930 2026 \u0924\u0915 \u0935\u093e\u092a\u0938 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964 \u20b949 \u092a\u093f\u0915\u0905\u092a \u092b\u093c\u0940\u0938 \u0932\u0917\u0947\u0917\u0940\u0964"
+        },
+        {
+          "turn": 5,
+          "customer_message": "\u0914\u0930 \u0930\u093f\u092b\u093c\u0902\u0921 \u0915\u093f\u0924\u0928\u0947 \u0926\u093f\u0928 \u092e\u0947\u0902 \u0906\u090f\u0917\u093e?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Refund timelines from initiation: UPI 1 to 3 business days, cards 5 to 7 business days, net banking 3 to 5 business days, Wallet instant within 2 hours."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC005",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "\u0928\u092e\u0938\u094d\u0924\u0947, \u092e\u0941\u091d\u0947 \u0905\u092a\u0928\u0947 \u0911\u0930\u094d\u0921\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u091a\u093e\u0939\u093f\u090f\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092e\u0948\u0902 ZentroMart \u0915\u0940 AI (artificial intelligence) \u0938\u092a\u094b\u0930\u094d\u091f \u0905\u0938\u093f\u0938\u094d\u091f\u0947\u0902\u091f \u0939\u0942\u0901\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u093e 8-\u0905\u0902\u0915\u094b\u0902 \u0915\u093e \u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964"
+        },
+        {
+          "turn": 2,
+          "customer_message": "\u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0939\u0948 3711 3676\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=37113676)",
+          "actual_tools": [
+            "lookup_order(order_id=37113676)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 (last 4 digits) \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 3,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 1581 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=37113676, verification_value=1581)",
+          "actual_tools": [
+            "lookup_order(order_id=37113676, verification_value=1581)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0927\u0928\u094d\u092f\u0935\u093e\u0926 Kavya, \u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0938\u092b\u0932 \u0939\u0941\u0906\u0964 \u0906\u092a\u0915\u0947 \u0911\u0930\u094d\u0921\u0930 37113676 \u0915\u093e \u0938\u094d\u091f\u0947\u091f\u0938 'delivered' \u0939\u0948\u0964"
+        },
+        {
+          "turn": 4,
+          "customer_message": "\u0915\u094d\u092f\u093e \u092e\u0948\u0902 \u0915\u093f\u0938\u0940 \u0907\u0902\u0938\u093e\u0928 \u0938\u0947 \u092c\u093e\u0924 \u0915\u0930 \u0938\u0915\u0924\u0940 \u0939\u0942\u0901?",
+          "passed": true,
+          "expected_decision": "escalate",
+          "actual_decision": "escalate",
+          "expected_tools": "create_ticket()",
+          "actual_tools": [
+            "create_ticket(reason=customer_requested)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u092e\u0948\u0902\u0928\u0947 \u090f\u0915 \u092a\u094d\u0930\u093e\u0925\u092e\u093f\u0915\u0924\u093e \u0938\u092a\u094b\u0930\u094d\u091f \u091f\u093f\u0915\u091f (TKTc265a90b7562465db37ee10fe37aee80) \u092c\u0928\u093e \u0926\u093f\u092f\u093e \u0939\u0948\u0964 \u0939\u092e\u093e\u0930\u0947 \u0938\u0939\u092f\u094b\u0917\u0940 \u091c\u0932\u094d\u0926 \u0939\u0940 \u0906\u092a\u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0917\u0947\u0964"
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC006",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, I need some help with an order.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 6649 2475.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=66492475)",
+          "actual_tools": [
+            "lookup_order(order_id=66492475)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 6073.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=66492475, verification_value=6073)",
+          "actual_tools": [
+            "lookup_order(order_id=66492475, verification_value=6073)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Farhan, your identity is verified. Order 66492475 is 'delivered'."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Actually, can I just speak to a person?",
+          "passed": true,
+          "expected_decision": "escalate",
+          "actual_decision": "escalate",
+          "expected_tools": "create_ticket()",
+          "actual_tools": [
+            "create_ticket(reason=customer_requested)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "That requires human attention. I am creating a support ticket (TKTc7b1453dd7814174b99856c1818a7883) and connecting you to a team colleague who will assist you."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC007",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 4501 1817.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=45011817)",
+          "actual_tools": [
+            "lookup_order(order_id=45011817)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 1267 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=45011817, verification_value=1267)",
+          "actual_tools": [
+            "lookup_order(order_id=45011817, verification_value=1267)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Ira, verification ho gaya. Aapke order 45011817 ka status 'shipped' hai. Promised delivery date 23 October 2026 (2026-10-23) hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Main is hafte teesri baar call kar rahi hoon isi baare mein.",
+          "passed": true,
+          "expected_decision": "escalate",
+          "actual_decision": "escalate",
+          "expected_tools": "create_ticket()",
+          "actual_tools": [
+            "create_ticket(reason=repeat_contact)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Main ek priority ticket (TKT4618b75626b744f48f1f100963b03a9d) create kar rahi hoon. Ek human colleague jald hi aapse connect karega."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC008",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, I need some help with an order.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 4819 6636.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=48196636)",
+          "actual_tools": [
+            "lookup_order(order_id=48196636)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 7725.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=48196636, verification_value=7725)",
+          "actual_tools": [
+            "lookup_order(order_id=48196636, verification_value=7725)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Fatima, your identity is verified. Order 48196636 is 'delivered'."
+        },
+        {
+          "turn": 4,
+          "customer_message": "This is the third time I'm calling about this in a week.",
+          "passed": true,
+          "expected_decision": "escalate",
+          "actual_decision": "escalate",
+          "expected_tools": "create_ticket()",
+          "actual_tools": [
+            "create_ticket(reason=repeat_contact)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "That requires human attention. I am creating a support ticket (TKT87959abf07bb46679be798402d81e09b) and connecting you to a team colleague who will assist you."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC009",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "\u0928\u092e\u0938\u094d\u0924\u0947, \u092e\u0941\u091d\u0947 \u0905\u092a\u0928\u0947 \u0911\u0930\u094d\u0921\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u091a\u093e\u0939\u093f\u090f\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092e\u0948\u0902 ZentroMart \u0915\u0940 AI (artificial intelligence) \u0938\u092a\u094b\u0930\u094d\u091f \u0905\u0938\u093f\u0938\u094d\u091f\u0947\u0902\u091f \u0939\u0942\u0901\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u093e 8-\u0905\u0902\u0915\u094b\u0902 \u0915\u093e \u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964"
+        },
+        {
+          "turn": 2,
+          "customer_message": "\u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0939\u0948 6783 0826\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=67830826)",
+          "actual_tools": [
+            "lookup_order(order_id=67830826)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 (last 4 digits) \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 3,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 0783 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=67830826, verification_value=0783)",
+          "actual_tools": [
+            "lookup_order(order_id=67830826, verification_value=0783)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0927\u0928\u094d\u092f\u0935\u093e\u0926 Joseph, \u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0938\u092b\u0932 \u0939\u0941\u0906\u0964 \u0906\u092a\u0915\u0947 \u0911\u0930\u094d\u0921\u0930 67830826 \u0915\u093e \u0938\u094d\u091f\u0947\u091f\u0938 'return_picked_up' \u0939\u0948\u0964"
+        },
+        {
+          "turn": 4,
+          "customer_message": "\u092e\u0947\u0930\u093e \u0930\u093f\u092b\u093c\u0902\u0921 \u0915\u0939\u093e\u0901 \u0939\u0948?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0938\u093e\u092e\u093e\u0928 \u092a\u093f\u0915\u0905\u092a \u0939\u094b \u091a\u0941\u0915\u093e \u0939\u0948 \u0914\u0930 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u091c\u093e\u0901\u091a (quality check / QC) \u0915\u0947 \u0905\u0927\u0940\u0928 \u0939\u0948\u0964 QC \u092a\u093e\u0938 \u0939\u094b\u0928\u0947 \u0915\u0947 \u092c\u093e\u0926 2 \u0915\u093e\u092e\u0915\u093e\u091c\u0940 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0930\u093f\u092b\u093c\u0902\u0921 \u0936\u0941\u0930\u0942 \u0939\u094b\u0917\u093e\u0964"
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC010",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 1664 0894.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=16640894)",
+          "actual_tools": [
+            "lookup_order(order_id=16640894)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 2108 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=16640894, verification_value=2108)",
+          "actual_tools": [
+            "lookup_order(order_id=16640894, verification_value=2108)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Farhan, verification ho gaya. Aapke order 16640894 ka status 'return_refund_initiated' hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Mera refund kahan hai?",
+          "passed": true,
+          "expected_decision": "escalate",
+          "actual_decision": "escalate",
+          "expected_tools": "create_ticket()",
+          "actual_tools": [
+            "create_ticket()"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Your refund was initiated with reference number (RRN) 315633825001, but is more than 3 business days overdue. I have created ticket (TKTe56026e3a1b4493687b03c76b2e35ccb) and escalated this to our finance team colleague for urgent resolution."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC011",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, my order hasn't arrived yet. Where is it?",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 2629 5015.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=26295015)",
+          "actual_tools": [
+            "lookup_order(order_id=26295015)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 8752.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=26295015, verification_value=8752)",
+          "actual_tools": [
+            "lookup_order(order_id=26295015, verification_value=8752)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Manish, your identity is verified. Order 26295015 is 'shipped'. Expected delivery is by 22 October 2026 (2026-10-22)."
+        },
+        {
+          "turn": 4,
+          "customer_message": "And what if I'm not at home?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "According to Warranty and ZentroMart Assured (WAR-3): Physical damage, liquid damage, normal wear and unauthorised repairs are not covered."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC012",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, my order hasn't arrived yet. Where is it?",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 7544 7568.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=75447568)",
+          "actual_tools": [
+            "lookup_order(order_id=75447568)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 0654.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=75447568, verification_value=0654)",
+          "actual_tools": [
+            "lookup_order(order_id=75447568, verification_value=0654)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Reyansh, your identity is verified. Order 75447568 is 'shipped'. Expected delivery is by 24 October 2026 (2026-10-24)."
+        },
+        {
+          "turn": 4,
+          "customer_message": "And what if I'm not at home?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "According to Warranty and ZentroMart Assured (WAR-3): Physical damage, liquid damage, normal wear and unauthorised repairs are not covered."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC013",
+      "passed": true,
+      "total_turns": 5,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 8615 2121.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=86152121)",
+          "actual_tools": [
+            "lookup_order(order_id=86152121)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 5568 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=86152121, verification_value=5568)",
+          "actual_tools": [
+            "lookup_order(order_id=86152121, verification_value=5568)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Kavya, verification ho gaya. Aapke order 86152121 ka status 'delivered' hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Theek hai. Ek aur sawaal: agle order pe do coupon laga sakta hoon?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Only one coupon (1 coupon) can be applied per order. Coupons cannot be combined."
+        },
+        {
+          "turn": 5,
+          "customer_message": "Achha. Aur mera order kab ship hua tha?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Aapka order 9 October 2026 (2026-10-09) ko ship hua tha."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC014",
+      "passed": true,
+      "total_turns": 5,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, I need some help with an order.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 1004 8947.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=10048947)",
+          "actual_tools": [
+            "lookup_order(order_id=10048947)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 9260.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=10048947, verification_value=9260)",
+          "actual_tools": [
+            "lookup_order(order_id=10048947, verification_value=9260)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Mary, your identity is verified. Order 10048947 is 'delivered'."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Okay. Different question: can I use two coupons on my next order?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "According to Coupons and offers (CPN-1): Only 1 coupon can be applied per order. Coupons cannot be combined, added after the order is placed, or exchanged for cash."
+        },
+        {
+          "turn": 5,
+          "customer_message": "Got it. And going back to my order, when was it shipped?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Your order was shipped on 8 October 2026 (2026-10-08)."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC015",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 8488 9113.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=84889113)",
+          "actual_tools": [
+            "lookup_order(order_id=84889113)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 6543 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=84889113, verification_value=6543)",
+          "actual_tools": [
+            "lookup_order(order_id=84889113, verification_value=6543)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Meera, verification ho gaya. Aapke order 84889113 ka status 'returned_refunded' hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Order late aaya, mujhe 300 rupaye ka voucher chahiye.",
+          "passed": true,
+          "expected_decision": "refuse",
+          "actual_decision": "refuse",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Maaf kijiye (sorry), delivery policy ke anusaar hum late delivery ke liye koi alag voucher ya compensation nahi de sakte."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC016",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 3117 1629.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=31171629)",
+          "actual_tools": [
+            "lookup_order(order_id=31171629)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 2987 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=31171629, verification_value=2987)",
+          "actual_tools": [
+            "lookup_order(order_id=31171629, verification_value=2987)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Aarav, verification ho gaya. Aapke order 31171629 ka status 'delivered' hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Order late aaya, mujhe 300 rupaye ka voucher chahiye.",
+          "passed": true,
+          "expected_decision": "refuse",
+          "actual_decision": "refuse",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Maaf kijiye (sorry), delivery policy ke anusaar hum late delivery ke liye koi alag voucher ya compensation nahi de sakte."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC017",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 3506 1733.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=35061733)",
+          "actual_tools": [
+            "lookup_order(order_id=35061733)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 2743 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=35061733, verification_value=2743)",
+          "actual_tools": [
+            "lookup_order(order_id=35061733, verification_value=2743)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Meera, verification ho gaya. Aapke order 35061733 ka status 'placed' hai. Promised delivery date 27 October 2026 (2026-10-27) hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Please ise cancel kar do.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Aap ise app mein My Orders section se free mein cancel kar sakte hain."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC018",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 2640 3404.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=26403404)",
+          "actual_tools": [
+            "lookup_order(order_id=26403404)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Last four digits 4255 hain.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=26403404, verification_value=4255)",
+          "actual_tools": [
+            "lookup_order(order_id=26403404, verification_value=4255)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Myra, verification ho gaya. Aapke order 26403404 ka status 'packed' hai. Promised delivery date 27 October 2026 (2026-10-27) hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Please ise cancel kar do.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Aap ise app mein My Orders section se free mein cancel kar sakte hain."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC019",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! Main ZentroMart ki AI (artificial intelligence) support assistant hoon. Kripya apna 8-digit order number share karein."
+        },
+        {
+          "turn": 2,
+          "customer_message": "Order number hai 1591 1102.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=15911102)",
+          "actual_tools": [
+            "lookup_order(order_id=15911102)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Verification ke liye apne registered phone ke last 4 digits (aakhri char ank) ya delivery pincode batayein."
+        },
+        {
+          "turn": 3,
+          "customer_message": "Pincode 440010 hai.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=15911102, verification_value=440010)",
+          "actual_tools": [
+            "lookup_order(order_id=15911102, verification_value=440010)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thanks Fatima, verification ho gaya. Aapke order 15911102 ka status 'shipped' hai. Promised delivery date 29 October 2026 (2026-10-29) hai."
+        },
+        {
+          "turn": 4,
+          "customer_message": "Mujhe ise cancel karna hai.",
+          "passed": true,
+          "expected_decision": "refuse",
+          "actual_decision": "refuse",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Order ship ho chuka hai isliye cancel nahi ho sakta. Aap delivery ke waqt lene se mana (refuse / decline) kar sakte hain. Electronics return window 7 din hai."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC020",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, I need some help with an order.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 4316 5903.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=43165903)",
+          "actual_tools": [
+            "lookup_order(order_id=43165903)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "My pincode is 700091.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=43165903, verification_value=700091)",
+          "actual_tools": [
+            "lookup_order(order_id=43165903, verification_value=700091)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Harsh, your identity is verified. Order 43165903 is 'shipped'. Expected delivery is by 21 October 2026 (2026-10-21)."
+        },
+        {
+          "turn": 4,
+          "customer_message": "I want to cancel it.",
+          "passed": true,
+          "expected_decision": "refuse",
+          "actual_decision": "refuse",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "A shipped order cannot be cancelled. You can refuse or decline the parcel at the door upon delivery. For electronics, return window is 7 days."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC021",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "\u0928\u092e\u0938\u094d\u0924\u0947, \u092e\u0941\u091d\u0947 \u0905\u092a\u0928\u0947 \u0911\u0930\u094d\u0921\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u091a\u093e\u0939\u093f\u090f\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092e\u0948\u0902 ZentroMart \u0915\u0940 AI (artificial intelligence) \u0938\u092a\u094b\u0930\u094d\u091f \u0905\u0938\u093f\u0938\u094d\u091f\u0947\u0902\u091f \u0939\u0942\u0901\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u093e 8-\u0905\u0902\u0915\u094b\u0902 \u0915\u093e \u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964"
+        },
+        {
+          "turn": 2,
+          "customer_message": "\u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0939\u0948 7746 1439\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=77461439)",
+          "actual_tools": [
+            "lookup_order(order_id=77461439)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 (last 4 digits) \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 3,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 1266 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=77461439, verification_value=1266)",
+          "actual_tools": [
+            "lookup_order(order_id=77461439, verification_value=1266)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u092e\u0947\u0932 \u0928\u0939\u0940\u0902 \u0916\u093e\u092f\u093e\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u0926\u094b\u092c\u093e\u0930\u093e \u091c\u093e\u0901\u091a \u0915\u0930 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 4,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 1266 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "refuse",
+          "actual_decision": "refuse",
+          "expected_tools": "lookup_order(order_id=77461439, verification_value=1266)",
+          "actual_tools": [
+            "lookup_order(order_id=77461439, verification_value=1266)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u092a\u0942\u0930\u093e \u0928\u0939\u0940\u0902 \u0939\u094b \u0938\u0915\u093e, \u0907\u0938\u0932\u093f\u090f \u092e\u0948\u0902 \u0911\u0930\u094d\u0921\u0930 \u0915\u093e \u0935\u093f\u0935\u0930\u0923 \u0938\u093e\u091d\u093e \u0928\u0939\u0940\u0902 \u0915\u0930 \u0938\u0915\u0924\u0940\u0964"
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC022",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "\u0928\u092e\u0938\u094d\u0924\u0947, \u092e\u0941\u091d\u0947 \u0905\u092a\u0928\u0947 \u0911\u0930\u094d\u0921\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u092e\u0926\u0926 \u091a\u093e\u0939\u093f\u090f\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092e\u0948\u0902 ZentroMart \u0915\u0940 AI (artificial intelligence) \u0938\u092a\u094b\u0930\u094d\u091f \u0905\u0938\u093f\u0938\u094d\u091f\u0947\u0902\u091f \u0939\u0942\u0901\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u093e 8-\u0905\u0902\u0915\u094b\u0902 \u0915\u093e \u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964"
+        },
+        {
+          "turn": 2,
+          "customer_message": "\u0911\u0930\u094d\u0921\u0930 \u0928\u0902\u092c\u0930 \u0939\u0948 5664 6891\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=56646891)",
+          "actual_tools": [
+            "lookup_order(order_id=56646891)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 (last 4 digits) \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 3,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 3357 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=56646891, verification_value=3357)",
+          "actual_tools": [
+            "lookup_order(order_id=56646891, verification_value=3357)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u092e\u0947\u0932 \u0928\u0939\u0940\u0902 \u0916\u093e\u092f\u093e\u0964 \u0915\u0943\u092a\u094d\u092f\u093e \u0905\u092a\u0928\u0947 \u0930\u091c\u093f\u0938\u094d\u091f\u0930\u094d\u0921 \u092b\u093c\u094b\u0928 \u0915\u0947 \u0906\u0916\u093c\u093f\u0930\u0940 4 \u0905\u0902\u0915 \u092f\u093e \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092a\u093f\u0928\u0915\u094b\u0921 \u0926\u094b\u092c\u093e\u0930\u093e \u091c\u093e\u0901\u091a \u0915\u0930 \u092c\u0924\u093e\u090f\u0902\u0964"
+        },
+        {
+          "turn": 4,
+          "customer_message": "\u0906\u0916\u093c\u093f\u0930\u0940 \u091a\u093e\u0930 \u0905\u0902\u0915 3357 \u0939\u0948\u0902\u0964",
+          "passed": true,
+          "expected_decision": "refuse",
+          "actual_decision": "refuse",
+          "expected_tools": "lookup_order(order_id=56646891, verification_value=3357)",
+          "actual_tools": [
+            "lookup_order(order_id=56646891, verification_value=3357)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "\u0935\u0947\u0930\u093f\u092b\u093c\u093f\u0915\u0947\u0936\u0928 \u092a\u0942\u0930\u093e \u0928\u0939\u0940\u0902 \u0939\u094b \u0938\u0915\u093e, \u0907\u0938\u0932\u093f\u090f \u092e\u0948\u0902 \u0911\u0930\u094d\u0921\u0930 \u0915\u093e \u0935\u093f\u0935\u0930\u0923 \u0938\u093e\u091d\u093e \u0928\u0939\u0940\u0902 \u0915\u0930 \u0938\u0915\u0924\u0940\u0964"
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC023",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, I need some help with an order.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 2235 4022.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=22354022)",
+          "actual_tools": [
+            "lookup_order(order_id=22354022)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 9967.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=22354022, verification_value=9967)",
+          "actual_tools": [
+            "lookup_order(order_id=22354022, verification_value=9967)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Abhishek, your identity is verified. Order 22354022 is 'delivered'."
+        },
+        {
+          "turn": 4,
+          "customer_message": "My express delivery was late. Do I get the fee back?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "If an Express order arrives after its promised date, the \u20b979 express fee is credited to your ZentroMart Wallet automatically within 48 hours."
+        }
+      ]
+    },
+    {
+      "conversation_id": "PC024",
+      "passed": true,
+      "total_turns": 4,
+      "turns": [
+        {
+          "turn": 1,
+          "customer_message": "Hi, I need some help with an order.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Hello! I am ZentroMart's AI support assistant. Please share your 8-digit order ID so I can assist you."
+        },
+        {
+          "turn": 2,
+          "customer_message": "The order number is 5863 4590.",
+          "passed": true,
+          "expected_decision": "clarify",
+          "actual_decision": "clarify",
+          "expected_tools": "lookup_order(order_id=58634590)",
+          "actual_tools": [
+            "lookup_order(order_id=58634590)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "For verification, please provide either the last 4 digits of your registered phone number or your delivery pincode."
+        },
+        {
+          "turn": 3,
+          "customer_message": "The last four digits are 8781.",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "lookup_order(order_id=58634590, verification_value=8781)",
+          "actual_tools": [
+            "lookup_order(order_id=58634590, verification_value=8781)"
+          ],
+          "missing_facts": [],
+          "violations": [],
+          "response": "Thank you Gaurav, your identity is verified. Order 58634590 is 'delivered'."
+        },
+        {
+          "turn": 4,
+          "customer_message": "My express delivery was late. Do I get the fee back?",
+          "passed": true,
+          "expected_decision": "answer",
+          "actual_decision": "answer",
+          "expected_tools": "",
+          "actual_tools": [],
+          "missing_facts": [],
+          "violations": [],
+          "response": "If an Express order arrives after its promised date, the \u20b979 express fee is credited to your ZentroMart Wallet automatically within 48 hours."
+        }
+      ]
+    }
+  ]
+}

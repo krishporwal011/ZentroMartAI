@@ -1,0 +1,18 @@
+[
+  {
+    "doc_id": "POL-RET",
+    "doc_title": "Returns policy",
+    "doc_type": "policy",
+    "audience": "customer",
+    "language": "en",
+    "version": "4.0",
+    "effective_from": "2026-08-01",
+    "status": "current",
+    "supersedes": "POL-RET-v3",
+    "superseded_by": null,
+    "section_id": "RET-2",
+    "section_title": "Return windows by category",
+    "content": "The return window starts on the **delivery date** and is counted in calendar days. The category of every product is listed in the `return_category` column of the product catalog.\n\n| Category | Return window | Catalog code |\n| --- | --- | --- |\n| Electronics and accessories | 7 days | `electronics` |\n| Clothing, footwear and bags | 15 days | `fashion` |\n| Home, kitchen and furniture | 10 days | `home_kitchen` |\n| Beauty and personal care (unopened, seal intact) | 7 days | `beauty_sealed` |\n| Books and stationery | 10 days | `books_media` |\n| Grocery, fresh and perishables | Not returnable | `grocery` |\n| Innerwear, lingerie and swimwear | Not returnable | `innerwear` |\n| Gift cards and digital codes | Not returnable | `digital` |",
+    "source_file": "pol_returns_v4.md"
+  }
+]

@@ -59,3 +59,11 @@ async def run_evaluation(use_asr: bool = Query(False, description="Use ASR speec
         "questions_benchmark": q_res,
         "conversations_benchmark": c_res,
     }
+
+
+@router.get("/compare")
+@router.post("/compare")
+async def compare_baseline_rag() -> Dict[str, Any]:
+    """Compare Step 1 LLM-Only Baseline against Step 2 Document-Grounded RAG."""
+    return await evaluation_runner.compare_baseline_vs_rag()
+
