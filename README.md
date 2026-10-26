@@ -362,7 +362,7 @@ npm run dev
   - `DATASET_DIR=Capstone_Project_Dataset_FTTT_2026`
   - `FRONTEND_ORIGIN=https://<your-frontend-domain>.vercel.app`
 
-For step-by-step instructions, see [`DEPLOYMENT_GUIDE.md`](DEPLOYMENT_GUIDE.md).
+For step-by-step instructions, see [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
 
 ---
 

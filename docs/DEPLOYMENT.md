@@ -112,7 +112,44 @@ The optimized production server will listen on port 3000.
 
 ## 6. Production Deployment Options
 
-### Option A: Docker Compose Deployment
+### Option A: Cloud Architecture — Vercel (Frontend) + Render (FastAPI Backend)
+
+ZentroMart AI features a decoupled architecture:
+1. **Frontend**: Next.js 16 (React 19, TypeScript) deployed serverlessly on **Vercel**.
+2. **Backend**: Python 3.10+ FastAPI service deployed as a web service on **Render** (or Fly.io / Railway / AWS).
+
+#### 1. Next.js Frontend Deployment on Vercel
+1. In your Vercel Dashboard, click **Add New** -> **Project** and import `krishporwal011/ZentroMartAI`.
+2. Configure Project Settings:
+   - **Framework Preset**: Next.js
+   - **Root Directory**: `frontend` *(Click Edit and select the `frontend` folder, or leave default as root since `vercel.json` and root `package.json` are provided)*
+   - **Build Command**: `npm run build` (or leave default)
+   - **Output Directory**: `.next` (or leave default)
+   - **Install Command**: `npm install` (or leave default)
+3. **Environment Variables**:
+   - `NEXT_PUBLIC_API_URL`: Your deployed FastAPI backend URL, e.g. `https://zentromart-backend.onrender.com` (do not add a trailing slash).
+   - *Security Note*: Never place private API keys (`TINYFISH_API_KEY`, `SARVAM_API_KEY`, `OPENAI_API_KEY`) in frontend variables. All keys remain private in the backend.
+
+#### 2. FastAPI Backend Deployment on Render
+1. In the Render Dashboard, click **New +** -> **Web Service**.
+2. Connect your GitHub repository `krishporwal011/ZentroMartAI`.
+3. Configure the Web Service:
+   - **Name**: `zentromart-backend`
+   - **Runtime**: `Python 3`
+   - **Root Directory**: `.` (leave as repository root to include dataset files)
+   - **Build Command**: `pip install -r backend/requirements.txt`
+   - **Start Command**: `PYTHONPATH=backend uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. **Environment Variables on Render**:
+   - `APP_ENV`: `production`
+   - `DATASET_DIR`: `Capstone_Project_Dataset_FTTT_2026`
+   - `FRONTEND_ORIGIN`: Your production Vercel URL (e.g., `https://zentromart-ai.vercel.app`)
+   - `TINYFISH_API_KEY`: *(Optional upstream API key for live web agent executions)*
+   - `SARVAM_API_KEY`: *(Optional upstream API key for live Indian language STT/TTS)*
+   - `OPENAI_API_KEY`: *(Optional upstream API key for GPT models)*
+
+---
+
+### Option B: Docker Compose Deployment
 
 Create `docker-compose.yml` in the repository root:
 

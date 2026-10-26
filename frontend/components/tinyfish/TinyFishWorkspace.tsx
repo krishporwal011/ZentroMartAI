@@ -600,3 +600,5 @@ export function TinyFishWorkspace() {
     </div>
   );
 }
+
+export default TinyFishWorkspace;

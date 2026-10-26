@@ -25,13 +25,20 @@ export default function Home() {
   const [activeCitationSection, setActiveCitationSection] = useState<string | null>(null);
 
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
+    const syncViewFromUrl = () => {
       const params = new URLSearchParams(window.location.search);
       const view = params.get("view");
       if (view && ["chat", "orders", "tickets", "knowledge", "evaluation", "settings", "tinyfish"].includes(view)) {
         setCurrentView(view as ViewType);
       }
-    }
+    };
+
+    window.addEventListener("popstate", syncViewFromUrl);
+    const timer = setTimeout(syncViewFromUrl, 0);
+    return () => {
+      window.removeEventListener("popstate", syncViewFromUrl);
+      clearTimeout(timer);
+    };
   }, []);
 
   const handleCitationClick = (sectionId: string) => {

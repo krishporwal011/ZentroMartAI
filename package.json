@@ -1,0 +1,12 @@
+{
+  "name": "zentromart-ai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZentroMart AI - VoiceOps 2026 Capstone monorepo root package",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix frontend start",
+    "lint": "npm --prefix frontend run lint"
+  }
+}
